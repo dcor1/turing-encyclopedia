@@ -7,7 +7,7 @@
     table {
       border-collapse: collapse;
       margin: 20px 0;
-      width: 60%;
+      width: 90%;
     }
     th, td {
       border: 1px solid #ccc;
@@ -15,156 +15,610 @@
       text-align: center;
       vertical-align: middle;
     }
+    .universal {
+      background-color: #ccffcc; /* green */
+    }
+    .lightred {
+      background-color: #ffcccc; /* red */
+    }
+    .lighterred {
+      background-color: #ffe0e0; /* red */
+    }
+    .lightyellow {
+      background-color: #ffffcc; /* yellow */
+    }
   </style>
 </head>
 <body>
   <h1>Turing Encyclopedia</h1>
-  <p>
-    This table shows (at a high level) whether Turing machines with
-    <strong>m</strong> states and <strong>n</strong> symbols are known or believed to be
-    universal. “Weakly universal” means the machine can simulate any TM but may require
-    a specially prepared (possibly infinite) initial tape. “Universal” (often “strongly
-    universal”) means simulation is possible starting from a blank tape and a finite
-    input. “Not universal” or “No known proof” indicates no proof of universality is
-    known or widely accepted for that configuration.
-  </p>
 
   <table>
     <thead>
       <tr>
         <th rowspan="2">#States</th>
-        <th colspan="5">#Symbols</th>
+        <th colspan="18">#Symbols</th>
       </tr>
       <tr>
+        <!-- Symbols 1 to 18 -->
         <th>1</th>
         <th>2</th>
         <th>3</th>
         <th>4</th>
         <th>5</th>
+        <th>6</th>
+        <th>7</th>
+        <th>8</th>
+        <th>9</th>
+        <th>10</th>
+        <th>11</th>
+        <th>12</th>
+        <th>13</th>
+        <th>14</th>
+        <th>15</th>
+        <th>16</th>
+        <th>17</th>
+        <th>18</th>
       </tr>
     </thead>
     <tbody>
-      <!-- Row for 1 state (no links here, because it's 1 state) -->
+
+      <!-- Row 1 -->
       <tr>
         <th>1</th>
-        <td>Not universal</td>
-        <td>Not universal</td>
-        <td>Not universal</td>
-        <td>Not universal</td>
-        <td>Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
+        <td class="lightred">Not universal</td>
       </tr>
 
-      <!-- Row for 2 states -->
+      <!-- Row 2 -->
       <tr>
         <th>2</th>
-        <!-- 1 symbol (no link here, because it's 1 symbol) -->
-        <td>Not universal</td>
-        <td><a href="#s2n2">Believed not universal</a></td>
-        <td><a href="#s2n3">Weakly universal<br>(Smith 2007)</a></td>
-        <td><a href="#s2n4">No known proof</a></td>
-        <td><a href="#s2n5">No known proof</a></td>
+        <td class="lightred">Not universal</td>
+        <!-- Column #2 left blank -->
+        <td class="lightred">Believed to not be weakly universal (T. Neary, 2017)</td>
+        <!-- (2,3) => weakly universal -->
+        <td class="lightyellow">Weakly universal (A. Smith 2007), not strongly universal (C. Feinstein, 2007)</td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td> 
+        <!-- (2,18) => universal -->
+        <td class="universal">Universal (Y. Rogozhin 1996)</td>
       </tr>
 
-      <!-- Row for 3 states -->
+      <!-- Row 3 -->
       <tr>
         <th>3</th>
-        <!-- 1 symbol (no link) -->
-        <td>Not universal</td>
-        <td><a href="#s3n2">Not universal</a></td>
-        <td><a href="#s3n3">Universal<br>(Rogozhin 1996)</a></td>
-        <td><a href="#s3n4">Possible,<br>no known example</a></td>
-        <td><a href="#s3n5">Possible,<br>no known example</a></td>
+        <td class="lightred">Not universal</td>
+        <td class="lighterred">Unknown</td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="universal">Universal (Y. Rogozhin 1996)</td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
       </tr>
 
-      <!-- Row for 4 states -->
+      <!-- Row 4 -->
       <tr>
         <th>4</th>
-        <!-- 1 symbol (no link) -->
-        <td>Not universal</td>
-        <td><a href="#s4n2">Universal<br>(Minsky 1967)</a></td>
-        <td><a href="#s4n3">Universal</a></td>
-        <td><a href="#s4n4">Universal</a></td>
-        <td><a href="#s4n5">Likely universal<br>(no specific proof)</a></td>
+        <td class="lightred">Not universal</td>
+        <td class="lighterred">Unknown</td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="universal">Universal (Y. Rogozhin 1996)</td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
       </tr>
 
-      <!-- Row for 5 states -->
+      <!-- Row 5 -->
       <tr>
         <th>5</th>
-        <!-- 1 symbol (no link) -->
-        <td>Not universal</td>
-        <td><a href="#s5n2">Likely universal,<br>no major example</a></td>
-        <td><a href="#s5n3">Likely universal,<br>no major example</a></td>
-        <td><a href="#s5n4">Likely universal,<br>no major example</a></td>
-        <td><a href="#s5n5">Universal by<br>standard constructions</a></td>
+        <td class="lightred">Not universal</td>
+        <td class="lighterred">Unknown</td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="universal">Universal (Y. Rogozhin 1996)</td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
       </tr>
+
+      <!-- Row 6 -->
+      <tr>
+        <th>6</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow">Weakly universal (T. Neary, D. Woods 2007)</td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+
+      <!-- Row 7 -->
+      <tr>
+        <th>7</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="universal">Universal (Y. Rogozhin 1996)</td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+
+      <!-- Row 8 -->
+      <tr>
+        <th>8</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+
+      <!-- Row 9 -->
+      <tr>
+        <th>9</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+
+      <!-- Row 10 -->
+      <tr>
+        <th>10</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal">Universal (Y. Rogozhin 1996)</td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+
+      <!-- Rows 11..23 -->
+      <!-- Note: Column #2 is blank, all other empty cells are green. -->
+      <tr>
+        <th>11</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>12</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>13</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>14</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>15</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>16</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>17</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>18</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>19</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>20</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>21</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>22</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+      <tr>
+        <th>23</th>
+        <td class="lightred">Not universal</td>
+        <td class="lightyellow"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+
+      <!-- Row 24 -->
+      <tr>
+        <th>24</th>
+        <td class="lightred">Not universal</td>
+        <!-- Column #2 => blank -->
+        <td class="universal">Universal (Y. Rogozhin 1996)</td>
+        <!-- col=3..18 => green if blank -->
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+        <td class="universal"></td>
+      </tr>
+
     </tbody>
   </table>
 
-  <!-- Sections for each cell -->
-  <!-- (We keep these sections, even if some cells no longer link here.) -->
-
-  <!-- 2 states, 2 symbols -->
-  <h2 id="s2n2">2 States, 2 Symbols</h2>
-  <p>Believed not universal...</p>
-
-  <!-- 2 states, 3 symbols -->
-  <h2 id="s2n3">2 States, 3 Symbols</h2>
-  <p>Weakly universal (Smith 2007)...</p>
-
-  <!-- 2 states, 4 symbols -->
-  <h2 id="s2n4">2 States, 4 Symbols</h2>
-  <p>No known proof of universality...</p>
-
-  <!-- 2 states, 5 symbols -->
-  <h2 id="s2n5">2 States, 5 Symbols</h2>
-  <p>No known proof of universality...</p>
-
-  <!-- 3 states, 2 symbols -->
-  <h2 id="s3n2">3 States, 2 Symbols</h2>
-  <p>Not universal...</p>
-
-  <!-- 3 states, 3 symbols -->
-  <h2 id="s3n3">3 States, 3 Symbols</h2>
-  <p>Universal (Rogozhin 1996)...</p>
-
-  <!-- 3 states, 4 symbols -->
-  <h2 id="s3n4">3 States, 4 Symbols</h2>
-  <p>Possible, but no known example showing universality...</p>
-
-  <!-- 3 states, 5 symbols -->
-  <h2 id="s3n5">3 States, 5 Symbols</h2>
-  <p>Possible, no known example...</p>
-
-  <!-- 4 states, 2 symbols -->
-  <h2 id="s4n2">4 States, 2 Symbols</h2>
-  <p>Universal (Minsky 1967)...</p>
-
-  <!-- 4 states, 3 symbols -->
-  <h2 id="s4n3">4 States, 3 Symbols</h2>
-  <p>Universal (small known constructions)...</p>
-
-  <!-- 4 states, 4 symbols -->
-  <h2 id="s4n4">4 States, 4 Symbols</h2>
-  <p>Universal (common in textbooks)...</p>
-
-  <!-- 4 states, 5 symbols -->
-  <h2 id="s4n5">4 States, 5 Symbols</h2>
-  <p>Likely universal, no specific proof...</p>
-
-  <!-- 5 states, 2 symbols -->
-  <h2 id="s5n2">5 States, 2 Symbols</h2>
-  <p>Likely universal, no major example...</p>
-
-  <!-- 5 states, 3 symbols -->
-  <h2 id="s5n3">5 States, 3 Symbols</h2>
-  <p>Likely universal, no major example...</p>
-
-  <!-- 5 states, 4 symbols -->
-  <h2 id="s5n4">5 States, 4 Symbols</h2>
-  <p>Likely universal, no major example...</p>
-
-  <!-- 5 states, 5 symbols -->
-  <h2 id="s5n5">5 States, 5 Symbols</h2>
-  <p>Universal by standard constructions...</p>
+  <h2>References</h2>
+  <ul>
+    <li>
+      Yurii Rogozhin (1996) Small Universal Turing Machines 
+      (<a href="https://files.nochill.in/papers/smallest_universal_turing_machine.pdf">link</a>)
+    </li>
+    <li>
+      Alex Smith (2007) Universality of Wolfram’s 2, 3 Turing Machine 
+      (<a href="https://www.wolframscience.com/prizes/tm23/TM23Proof.pdf">link</a>)
+    </li>
+    <li>
+      Turlough Neary, Damien Woods (2007) Small weakly universal Turing machines (<a href="https://dna.hamilton.ie/assets/dw/NearyWoodsFCT09.pdf">link</a>)
+    </li>
+    <li>
+      Turlough Neary (2016) 2-State 2-Symbol Turing Machines with Periodic
+      Support Produce Regular Sets (<a href="https://inria.hal.science/hal-01657010/document">link</a>)
+    </li>
+    <li>
+      Craig Feinstein (2007) 2-State 3-Symbol Universal Turing Machines Do Not Exist (<a href="https://arxiv.org/pdf/0706.4440">link</a>)
+    </li>
+  </ul>
 </body>
 </html>
