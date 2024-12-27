@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Turing Encyclopedia</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin: 20px 0;
+      width: 60%;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 6px;
+      text-align: center;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body>
+  <h1>Turing Encyclopedia</h1>
+  <p>
+    This table shows (at a high level) whether Turing machines with
+    <strong>m</strong> states and <strong>n</strong> symbols are known or believed to be
+    universal. “Weakly universal” means the machine can simulate any TM but may require
+    a specially prepared (possibly infinite) initial tape. “Universal” (often “strongly
+    universal”) means simulation is possible starting from a blank tape and a finite
+    input. “Not universal” or “No known proof” indicates no proof of universality is
+    known or widely accepted for that configuration.
+  </p>
+
+  <table>
+    <thead>
+      <tr>
+        <th rowspan="2">#States</th>
+        <th colspan="5">#Symbols</th>
+      </tr>
+      <tr>
+        <th>1</th>
+        <th>2</th>
+        <th>3</th>
+        <th>4</th>
+        <th>5</th>
+      </tr>
+    </thead>
+    <tbody>
+      <!-- Row for 1 state (no links here, because it's 1 state) -->
+      <tr>
+        <th>1</th>
+        <td>Not universal</td>
+        <td>Not universal</td>
+        <td>Not universal</td>
+        <td>Not universal</td>
+        <td>Not universal</td>
+      </tr>
+
+      <!-- Row for 2 states -->
+      <tr>
+        <th>2</th>
+        <!-- 1 symbol (no link here, because it's 1 symbol) -->
+        <td>Not universal</td>
+        <td><a href="#s2n2">Believed not universal</a></td>
+        <td><a href="#s2n3">Weakly universal<br>(Smith 2007)</a></td>
+        <td><a href="#s2n4">No known proof</a></td>
+        <td><a href="#s2n5">No known proof</a></td>
+      </tr>
+
+      <!-- Row for 3 states -->
+      <tr>
+        <th>3</th>
+        <!-- 1 symbol (no link) -->
+        <td>Not universal</td>
+        <td><a href="#s3n2">Not universal</a></td>
+        <td><a href="#s3n3">Universal<br>(Rogozhin 1996)</a></td>
+        <td><a href="#s3n4">Possible,<br>no known example</a></td>
+        <td><a href="#s3n5">Possible,<br>no known example</a></td>
+      </tr>
+
+      <!-- Row for 4 states -->
+      <tr>
+        <th>4</th>
+        <!-- 1 symbol (no link) -->
+        <td>Not universal</td>
+        <td><a href="#s4n2">Universal<br>(Minsky 1967)</a></td>
+        <td><a href="#s4n3">Universal</a></td>
+        <td><a href="#s4n4">Universal</a></td>
+        <td><a href="#s4n5">Likely universal<br>(no specific proof)</a></td>
+      </tr>
+
+      <!-- Row for 5 states -->
+      <tr>
+        <th>5</th>
+        <!-- 1 symbol (no link) -->
+        <td>Not universal</td>
+        <td><a href="#s5n2">Likely universal,<br>no major example</a></td>
+        <td><a href="#s5n3">Likely universal,<br>no major example</a></td>
+        <td><a href="#s5n4">Likely universal,<br>no major example</a></td>
+        <td><a href="#s5n5">Universal by<br>standard constructions</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+  <!-- Sections for each cell -->
+  <!-- (We keep these sections, even if some cells no longer link here.) -->
+
+  <!-- 2 states, 2 symbols -->
+  <h2 id="s2n2">2 States, 2 Symbols</h2>
+  <p>Believed not universal...</p>
+
+  <!-- 2 states, 3 symbols -->
+  <h2 id="s2n3">2 States, 3 Symbols</h2>
+  <p>Weakly universal (Smith 2007)...</p>
+
+  <!-- 2 states, 4 symbols -->
+  <h2 id="s2n4">2 States, 4 Symbols</h2>
+  <p>No known proof of universality...</p>
+
+  <!-- 2 states, 5 symbols -->
+  <h2 id="s2n5">2 States, 5 Symbols</h2>
+  <p>No known proof of universality...</p>
+
+  <!-- 3 states, 2 symbols -->
+  <h2 id="s3n2">3 States, 2 Symbols</h2>
+  <p>Not universal...</p>
+
+  <!-- 3 states, 3 symbols -->
+  <h2 id="s3n3">3 States, 3 Symbols</h2>
+  <p>Universal (Rogozhin 1996)...</p>
+
+  <!-- 3 states, 4 symbols -->
+  <h2 id="s3n4">3 States, 4 Symbols</h2>
+  <p>Possible, but no known example showing universality...</p>
+
+  <!-- 3 states, 5 symbols -->
+  <h2 id="s3n5">3 States, 5 Symbols</h2>
+  <p>Possible, no known example...</p>
+
+  <!-- 4 states, 2 symbols -->
+  <h2 id="s4n2">4 States, 2 Symbols</h2>
+  <p>Universal (Minsky 1967)...</p>
+
+  <!-- 4 states, 3 symbols -->
+  <h2 id="s4n3">4 States, 3 Symbols</h2>
+  <p>Universal (small known constructions)...</p>
+
+  <!-- 4 states, 4 symbols -->
+  <h2 id="s4n4">4 States, 4 Symbols</h2>
+  <p>Universal (common in textbooks)...</p>
+
+  <!-- 4 states, 5 symbols -->
+  <h2 id="s4n5">4 States, 5 Symbols</h2>
+  <p>Likely universal, no specific proof...</p>
+
+  <!-- 5 states, 2 symbols -->
+  <h2 id="s5n2">5 States, 2 Symbols</h2>
+  <p>Likely universal, no major example...</p>
+
+  <!-- 5 states, 3 symbols -->
+  <h2 id="s5n3">5 States, 3 Symbols</h2>
+  <p>Likely universal, no major example...</p>
+
+  <!-- 5 states, 4 symbols -->
+  <h2 id="s5n4">5 States, 4 Symbols</h2>
+  <p>Likely universal, no major example...</p>
+
+  <!-- 5 states, 5 symbols -->
+  <h2 id="s5n5">5 States, 5 Symbols</h2>
+  <p>Universal by standard constructions...</p>
+</body>
+</html>
